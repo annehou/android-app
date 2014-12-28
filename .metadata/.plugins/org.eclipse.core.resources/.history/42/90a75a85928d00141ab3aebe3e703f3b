@@ -1,0 +1,27 @@
+package org.annie.g2048;
+
+import android.content.Context;
+import android.util.AttributeSet;
+import android.widget.GridLayout;
+
+public class GameView extends GridLayout {
+	
+	private Card[][] cards = new Card[4][4];
+
+	public GameView(Context context, AttributeSet attrs) {
+		super(context, attrs);
+		// TODO Auto-generated constructor stub
+		
+	}
+	//≥ı ºªØ
+	public void init(){
+		Card c;
+		for(int i=0;i<4;i++){
+			for(int j=0;j<4;j++){
+				c = new Card(getContext());
+				cards[i][j] = c;
+			}
+		}
+	}
+
+}

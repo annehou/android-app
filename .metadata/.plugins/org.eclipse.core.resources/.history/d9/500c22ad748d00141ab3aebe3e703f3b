@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:id="@+id/score"
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:text="@string/score"
+            android:textSize="12sp"
+            android:textColor="#FBEBD5"
+            android:background="#CCC3B4"
+            android:textStyle="bold"
+            android:layout_marginRight="20dp"/>
+
+        <TextView android:id="@+id/maxScore"
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:text="@string/max_score"
+            android:textSize="12sp"
+            android:textColor="#FBEBD5"
+            android:background="#CCC3B4"
+            android:textStyle="bold"/>     
+    </LinearLayout>
+    <org.annie.g2048.GameView
+        android:id="@+id/gamePanel"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        />
+    
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        >
+        <Button android:id="@+id/replay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="重新游戏"/>
+        <Button android:id="@+id/replay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="声音  关"/>
+    </LinearLayout>
+</LinearLayout>
+

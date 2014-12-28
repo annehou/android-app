@@ -1,0 +1,15 @@
+package org.annie.g2048;
+
+import android.content.Context;
+import android.util.AttributeSet;
+import android.widget.FrameLayout;
+
+public class Card extends FrameLayout {
+
+	public Card(Context context, AttributeSet attrs) {
+		super(context, attrs);
+		// TODO Auto-generated constructor stub
+	}
+
+
+}

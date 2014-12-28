@@ -1,0 +1,7 @@
+package org.annie.g2048;
+
+import android.widget.FrameLayout;
+
+public class Card extends FrameLayout {
+
+}

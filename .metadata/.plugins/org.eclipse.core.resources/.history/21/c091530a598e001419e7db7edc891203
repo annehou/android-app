@@ -1,0 +1,91 @@
+package org.annie.g2048;
+
+import android.content.Context;
+import android.view.Gravity;
+import android.widget.FrameLayout;
+import android.widget.TextView;
+
+/**
+ * 游戏中卡片类
+ * @author lenovo
+ *
+ */
+public class Card extends FrameLayout {
+	private int cardWidth = 0;
+	private int cardHeight = 0;
+	private TextView label;
+	private int num = 0;
+	private int bgcolor = 0x33ffffff;
+	private int[] bgcolors = new int[]{
+			0xfeefdc,0xfee7bb,0xff8f6a,0xfe7251,0xff6241,
+			0xfe4600,0xeedf82,0xf2d04a,0xf0c950,0xf0c441,
+			0xebc330,0xff0000
+	};
+	
+	
+	public Card(Context context) {
+		super(context);
+		
+		label = new TextView(getContext());
+		label.setTextSize(32);
+		label.setBackgroundColor(bgcolor);
+		label.setGravity(Gravity.CENTER);
+		
+		//填充满整个父容器
+		LayoutParams lp = new LayoutParams(-1, -1); 
+		//左，上部留有10dp间距
+		lp.setMargins(10, 10, 0, 0); 
+		addView(label, lp);
+		
+		setNum(0);
+	}
+
+	public int getNum() {
+		return num;
+	}
+	public void setNum(int num) {
+		this.num = num;
+		
+		if(num<=0){
+			label.setText("");
+		}else{
+			label.setText(num+"");
+		}
+	}
+	public int getCardWidth() {
+		return cardWidth;
+	}
+
+	public void setCardWidth(int cardWidth) {
+		this.cardWidth = cardWidth;
+	}
+
+	public int getCardHeight() {
+		return cardHeight;
+	}
+
+	public void setCardHeight(int cardHeight) {
+		this.cardHeight = cardHeight;
+	}
+
+	public int getBgcolor() {
+		return bgcolor;
+	}
+
+	public void setBgcolor(int index) {
+		//对于大于2048的网格，背景颜色统一为红色
+		if(index>=11)
+			index=11;
+		this.bgcolor = bgcolors[index];
+		label.setBackgroundColor(this.bgcolor);	
+	}
+	
+	/**
+	 * 判断两张卡片是否可以折叠
+	 * @param other
+	 * @return
+	 */
+	public boolean equals(Card other){
+		return getNum() == other.getNum(); //数字相等，即可折叠
+	}
+}
