@@ -1,7 +1,0 @@
-package org.annie.g2048;
-
-import android.widget.GridLayout;
-
-public class GameView extends GridLayout {
-
-}

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">围住神经猫</string>
+    <string name="first">第一关</string>
+    <string name="second">第二关</string>
+    <string name="third">第三关</string>
+    <string name="forth">第四关</string>
+    <string name="fifth">第五关</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+</resources>

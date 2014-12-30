@@ -19,4 +19,6 @@
 <fullyQualifiedTypeName name="org.annie.g2048.R.raw"/>
 <fullyQualifiedTypeName name="android.view.View.OnClickListener"/>
 <fullyQualifiedTypeName name="org.annie.g2048.R.id"/>
+<fullyQualifiedTypeName name="android.content.SharedPreferences"/>
+<fullyQualifiedTypeName name="android.content.SharedPreferences.Editor"/>
 </qualifiedTypeNameHistroy>
